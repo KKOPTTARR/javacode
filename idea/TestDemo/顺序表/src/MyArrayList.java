@@ -14,9 +14,9 @@ public class MyArrayList {
 
     public static void main(String[] args) {
 
+        MyArrayList myArrayList = new MyArrayList();
 
         // 在 pos 位置新增元素
-        MyArrayList myArrayList = new MyArrayList();
         myArrayList.add(0,1);
         myArrayList.add(1,2);
         myArrayList.add(2,3);
