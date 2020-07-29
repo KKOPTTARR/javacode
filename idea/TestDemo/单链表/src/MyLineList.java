@@ -1,4 +1,3 @@
-import com.sun.org.apache.xpath.internal.objects.XNodeSet;
 
 //单链表
 class Node {
@@ -15,7 +14,6 @@ public class MyLineList {
     public Node head;
     //标识单链表头节点
     //不是真正的头节点（自定一个开始的地方，实际上是访问的第一个节点）
-
 
 
     // 无头单向非循环链表实现
@@ -43,7 +41,7 @@ public class MyLineList {
     //显示打印
     public void display() {
         Node cur = this.head;
-        for(;cur!=null;cur=cur.next) {
+        for (; cur != null; cur = cur.next) {
             System.out.println(cur.data + " ");
         }
         System.out.println(" ");
@@ -53,15 +51,14 @@ public class MyLineList {
     //尾插法
     public void addLast(int data) {
         Node node = new Node(data);
-        if(this.head==null) {
+        if (this.head == null) {
             this.head = node;
-        }
-        else {
+        } else {
             Node cur = this.head;
-            while(cur.next !=null) {
+            while (cur.next != null) {
                 cur = cur.next;
             }
-            cur.next=node;
+            cur.next = node;
         }
     }
 
@@ -79,56 +76,56 @@ public class MyLineList {
         }
 
         Node cur = searchPrev(index);
-        node.next=cur.next;
-        cur.next=node;
+        node.next = cur.next;
+        cur.next = node;
     }
 
 
     public Node searchPrev(int index) {
-            Node cur = this.head;
-            int count =0;
-            while(count<index-1) {
-                cur = cur.next;
-                count++;
-            }
-            return cur;
+        Node cur = this.head;
+        int count = 0;
+        while (count < index - 1) {
+            cur = cur.next;
+            count++;
+        }
+        return cur;
     }
 
 
     public int getLength() {
-        int count =0;
-        for(Node cur=this.head;cur!=null;cur=cur.next) {
+        int count = 0;
+        for (Node cur = this.head; cur != null; cur = cur.next) {
             count++;
         }
         return count;
     }
 
     //查找key
-   public Node searchPrevNode(int key) {
+    public Node searchPrevNode(int key) {
         Node cur = this.head;
 
         //找不到就继续走，找到则返回
-        if(cur.next.data != key) {
-            if(cur.next.data==key) {
+        if (cur.next.data != key) {
+            if (cur.next.data == key) {
                 return cur;
             }
             cur = cur.next;
         }
         return null;//找不到就null
-   }
+    }
 
     //删除第一次出现关键字为key的节点
     public void remove(int key) {
-        if(this.head==null) {
+        if (this.head == null) {
             return;
         }
-        if(this.head.data==key) {
-            this.head=this.head.next;
+        if (this.head.data == key) {
+            this.head = this.head.next;
             return;
         }
 
         Node cur = searchPrevNode(key);
-        if(cur==null) {
+        if (cur == null) {
             System.out.println("无该数字");
             return;
         }
@@ -136,5 +133,32 @@ public class MyLineList {
         cur.next = del.next;//前移
     }
 
+
+    //删除所有值为key的节点
+    public void removeAllKey(int key) {
+
+        Node prev = this.head;
+
+        for (Node cur = this.head.next; cur != null; cur = cur.next) {
+            if (cur.data == key) {
+                prev.next = cur.next;
+            } else {
+                prev = cur;
+            }
+        }
+        if(this.head == null) {
+            return;
+        }
+        if (this.head.data == key) {
+            this.head = this.head.next;
+        }
+    }
+
+
+
+    //列表清空
+    public void clear() {
+        this.head=null;
+    }
 }
 

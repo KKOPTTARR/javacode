@@ -3,8 +3,11 @@ public class Test {
         MyLineList myLineList = new MyLineList();
         myLineList.addFirst(1);
         myLineList.addFirst(2);
+        myLineList.addFirst(3);
+        myLineList.addFirst(2);
+        myLineList.addFirst(2);
         myLineList.display();
-        System.out.println("===================");
+      /*  System.out.println("===================");
         myLineList.addLast(5);
         myLineList.display();
         System.out.println("===================");
@@ -16,5 +19,10 @@ public class Test {
         myLineList.addIndex(1,5);
         myLineList.display();
         System.out.println("===================");
+        myLineList.remove(1);
+        myLineList.display();*/
+        System.out.println("===================");
+        myLineList.removeAllKey(2);
+        myLineList.display();
     }
 }
