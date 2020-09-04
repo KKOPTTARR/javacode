@@ -15,3 +15,4 @@ public class swap
 	System.out.println("a:" + a + "b:" + b);
 	}
 }
+//int交换
