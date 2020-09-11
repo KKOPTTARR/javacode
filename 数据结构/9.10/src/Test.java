@@ -15,7 +15,7 @@ public class Test {
 
         p = null;
         //生活用语表述：p这个引用不指向任何对象
-
+        //
 
 
     }
