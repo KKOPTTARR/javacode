@@ -12,6 +12,7 @@ public class EachNumber {
        }
            System.out.println(a%10);
     }
+
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         System.out.print("请输入一个整数：");
@@ -19,6 +20,7 @@ public class EachNumber {
         eachNumber(n);
         //System.out.println(" " + result + " ");
     }
+
    /*
    //常规方法
    public static void main(String[] args) {
@@ -41,5 +43,6 @@ public class EachNumber {
             c/=10;
             System.out.println(d);
         }
-    }*/
+    }
+    */
 }
