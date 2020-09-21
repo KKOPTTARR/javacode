@@ -1,7 +1,7 @@
 
 //单链表
 class Node {
-    public int data;//数据
+    public int data;//数据内容
     public Node next;//地址
 
     public Node(int data) {
