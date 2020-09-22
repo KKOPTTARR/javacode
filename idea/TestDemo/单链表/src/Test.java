@@ -7,7 +7,7 @@ public class Test {
         myLineList.addFirst(2);
         myLineList.addFirst(2);
         myLineList.display();
-      /*  System.out.println("===================");
+        System.out.println("===================");
         myLineList.addLast(5);
         myLineList.display();
         System.out.println("===================");
@@ -20,7 +20,7 @@ public class Test {
         myLineList.display();
         System.out.println("===================");
         myLineList.remove(1);
-        myLineList.display();*/
+        myLineList.display();
         System.out.println("===================");
         myLineList.removeAllKey(2);
         myLineList.display();
