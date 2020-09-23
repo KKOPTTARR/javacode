@@ -5,14 +5,14 @@ public class GetNumber {
     public static void main(String[] args) {
 
         Scanner scan = new Scanner(System.in);
-        System.out.println("how many");
+        System.out.println("最大的元素是");
         int m = scan.nextInt();
-        System.out.println("how long");
+        System.out.println("随机抽取并排序的元素个数是");
         int k = scan.nextInt();
 
 
         int[] array = new int[m];
-        for(int i = 0;i < array.length-1;i++) {
+        for(int i = 0;i < array.length;i++) {
             array[i] = i + 1;
         }
 
