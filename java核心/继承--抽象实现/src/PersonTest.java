@@ -1,6 +1,7 @@
 abstract class Person {
 
     public abstract String getOtherInformation();
+    
     private String name;
     private int age;
 
