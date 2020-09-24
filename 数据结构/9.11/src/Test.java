@@ -24,6 +24,7 @@ class Teacher {
         //3.根据我们设计的目的，来判断对象是否代表同一个现实事务
         //主要名字一样就代表同一个现实事务
         Teacher o = (Teacher)obj;
+
         return this.name.equals(o.name);
     }
 }
