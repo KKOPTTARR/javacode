@@ -19,7 +19,7 @@ public class PushAndPopOfStack {
         Stack<Integer>stack = new Stack<>();
         stack.push(data2);
     }
-
+//
 
 
 
