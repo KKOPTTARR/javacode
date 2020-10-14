@@ -33,7 +33,7 @@ public class MyLineList {
         }*/
         nobe.next = this.head;
         this.head = nobe;
-        //先把原head引用的地址赋给noe
+        //先把原head引用的地址赋给node
         //再让node成为新的head
     }
 
