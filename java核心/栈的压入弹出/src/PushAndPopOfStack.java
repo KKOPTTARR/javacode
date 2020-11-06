@@ -6,6 +6,7 @@ public class PushAndPopOfStack {
         pushStack(n);
         popStack(n);
 
+
     }
     public static void popStack(int data1) {
         Stack<Integer>stack = new Stack<>();
