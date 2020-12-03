@@ -1,5 +1,24 @@
 /*
 
+public class Test {
+    public static void main(String[] args) {
+        byte b1=1,b2=2,b3,b6;
+        final byte b4=4,b5=6;
+        b6=b4+b5;
+        b3=(b1+b2);
+        System.out.println(b3+b6);
+
+    }
+}
+//b3=(b1+b2) 编译错误
+//Error:(6, 14) java: 不兼容的类型: 从int转换到byte可能会有损失
+
+
+ */
+
+
+/*
+
 class HasStatic{
     private static int x = 100;
 }
