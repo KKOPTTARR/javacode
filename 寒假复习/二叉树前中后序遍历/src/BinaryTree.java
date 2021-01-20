@@ -14,5 +14,7 @@ public class BinaryTree {
             System.out.println("添加的是" + array[nodeIndex]);
             nodeList.add(start);
         }
+
+        for()
     }
 }
