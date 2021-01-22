@@ -37,6 +37,7 @@ public class BinaryTree {
     }
 
     public static void midOrderTraverse(Node node){
+        
 
     }
 }
