@@ -32,8 +32,8 @@ public class BinaryTree {
             return;
         }
         System.out.println(node.data + " ");
+
         preOrderTraverse(node.leftChild);
-        
         preOrderTraverse(node.rightChild);
     }
 
