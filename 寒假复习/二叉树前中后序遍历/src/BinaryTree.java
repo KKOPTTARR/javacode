@@ -27,6 +27,7 @@ public class BinaryTree {
         }
     }
 
+    
     public static void preOrderTraverse(Node node){
         if(node == null){
             return;
