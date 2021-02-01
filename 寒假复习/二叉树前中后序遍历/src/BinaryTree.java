@@ -27,15 +27,14 @@ public class BinaryTree {
         }
     }
 
-    
     public static void preOrderTraverse(Node node){
         if(node == null){
             return;
         }
         System.out.println(node.data + " ");
-
         preOrderTraverse(node.leftChild);
         preOrderTraverse(node.rightChild);
+        
     }
 
     public static void midOrderTraverse(Node node){
