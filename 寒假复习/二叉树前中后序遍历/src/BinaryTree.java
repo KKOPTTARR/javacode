@@ -34,7 +34,8 @@ public class BinaryTree {
         System.out.println(node.data + " ");
         preOrderTraverse(node.leftChild);
         preOrderTraverse(node.rightChild);
-        
+
+
     }
 
     public static void midOrderTraverse(Node node){
