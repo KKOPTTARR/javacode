@@ -27,6 +27,7 @@ public class LinkedList {
             current = current.next;
         }
         System.out.println();
+        
     }
 
     public void insert(int data,String names,int np){
