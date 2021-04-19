@@ -3,16 +3,37 @@
  */
 
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 public class Bubble {
-    int data[] = new int[]{5,3,1,7,9,2};
+    int data[] = new int[10];
     private int size=data.length;
 
-    public static void main(String[] args) {
-        System.out.println("冒泡排序：");
+    public static void main(String[] args) throws IOException {
+        
         Bubble test = new Bubble();
+
+        test.inputarr();
+        test.showData();
+        System.out.println("冒泡排序：");
+        
         test.showData();
         test.bubble();
         test.showData();
+    }
+    
+    public void inputarr() throws IOException {
+        int i;
+        for(i=0;i<size;i++) {
+            System.out.println("请输入第"+(i+1)+"个数据:");
+
+            InputStreamReader isr = new InputStreamReader(System.in);
+            BufferedReader br = new BufferedReader(isr);
+            data[i]=Integer.parseInt(br.readLine());
+        }
+        
     }
 
     //打印数据
