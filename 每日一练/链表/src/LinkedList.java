@@ -36,17 +36,44 @@ public class LinkedList {
         Node newNode = new Node(score,name,number);
         if(this.isEmpty()) {
            first=newNode;
+           last=newNode;
         }
         else {
             last.next=newNode;
+            last=newNode;
         }
-        last=newNode;
+
 
     }
 
     //删
     public void delete(Node delNode) {
-        
+        Node newNode;
+        Node temp;
+
+        //头删
+        if(first.score==delNode.score) {
+            first=first.next;
+        }
+        //尾删
+        else if(last.score==delNode.score) {
+            newNode=first;
+            while(newNode.next!=last) {
+                newNode=newNode.next;
+            }
+            newNode.next=last.next;
+            last=newNode;
+        }
+        //中间删
+        else {
+            newNode=first;
+            temp=first;
+            while(newNode.score!=delNode.score) {
+                temp=newNode;
+                newNode=newNode.next;
+            }
+            temp.next=delNode.next;
+        }
 
     }
 }
