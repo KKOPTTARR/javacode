@@ -1,55 +1,74 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class QuickSort {
+    int data[] = new int[10];
+    int size = data.length;
 
-    int size;
-    int array[] = new int[100];
-
-
-    public void quick(int arr[],int size,int left,int right) {
-        int i,j,temp;
-        int left_index;
-        int right_index;
-        int key=arr[left];
-
-        if(left<right) {
-            left_index = left + 1;
-            right_index = right;
-
-            while(true) {
-
-                for(i=left+1;i<right;i++) {
-                    if(arr[i]>=key) {
-                        left_index=i;
-                        break;
-                    }
-                    left_index++;
-                }
-
-                for(j=right;j>left+1;j--) {
-                    if(arr[j]<=key) {
-                        right_index=j;
-                        break;
-                    }
-                    right_index--;
-                }
-
-                if(left_index<right_index) {
-                    temp=arr[left_index];
-                    arr[left_index]=arr[right_index];
-                    arr[right_index]=temp;
-                }
-                else {
-                    break;
-                }
-            }
-
-            if(left_index>=right_index) {
-                temp=key;
-                key=arr[right_index];
-                arr[right_index]=temp;
-                quick(arr,size,left,right_index-1);
-                quick(arr,size,right_index+1,right);
-            }
+    void showData() {
+        int i;
+        for (i = 0; i <= size - 1; i++) {
+            System.out.print("[" + data[i] + "]" + " ");
         }
+        System.out.println("");
+    }
+
+
+    public static void Quickly(int[] a,int fist,int last) {
+        int b;//用来接收寻找到位置后元素的下标
+        if(fist<last) {
+            b=sort(a,fist,last); //调用寻找方法，也就是找到9 所在的位置
+            Quickly(a,fist,b-1);//9所在位置的左半部分
+            Quickly(a,b+1,last);//9所在位置的右半部分
+        }
+    }
+    public static int sort(int[] a,int fist,int last) {
+        int val=a[fist];
+        while(fist<last) {
+            while(fist<last && a[last]>=val) { //移动下标
+                last--;
+            }
+            a[fist]=a[last]; //赋值
+            while(fist<last && a[fist]<=val) { //移动下标
+                fist++;
+            }
+            a[last]=a[fist]; //赋值
+        }
+        a[fist]=val; //将9放到最终位置
+        return fist; //返回9所在位置的下标
+    }
+
+
+    void inputarr2() throws IOException {
+        int j;
+        for (j = 0; j < size; j++) {
+            InputStreamReader isr = new InputStreamReader(System.in);
+            BufferedReader br = new BufferedReader(isr);
+            data[j] = Integer.parseInt(br.readLine());
+        }
+    }
+
+
+    public static void main(String[] args) throws IOException {
+        QuickSort array = new QuickSort();
+
+
+
+        System.out.println("length:");
+        try{
+            InputStreamReader isr = new InputStreamReader(System.in);
+            BufferedReader br = new BufferedReader(isr);
+            array.size = Integer.parseInt(br.readLine());
+        }catch (Exception e) { }
+        System.out.println("array:");
+        array.inputarr2();
+        System.out.println("before sort:");
+        array.showData();
+
+        Quickly(array.data,0,array.size-1);
+
+        System.out.println("after sort:");
+        array.showData();
     }
 }
