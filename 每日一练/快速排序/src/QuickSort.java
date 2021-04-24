@@ -3,11 +3,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class QuickSort {
-<<<<<<< HEAD
+
     int data[] = new int[100];
-=======
-    int data[] = new int[10];
->>>>>>> fde96a3cf9fcb0feb98b7fe080000234f59ff56d
     int size = data.length;
 
     void showData() {
@@ -27,12 +24,12 @@ public class QuickSort {
             Quickly(a,b+1,last);//9所在位置的右半部分
         }
     }
+
     public static int sort(int[] a,int fist,int last) {
         int val=a[fist];
         while(fist<last) {
             while(fist<last && a[last]>=val) { //移动下标
                 last--;
-<<<<<<< HEAD
             }
             a[fist]=a[last]; //赋值
             while(fist<last && a[fist]<=val) { //移动下标
@@ -40,45 +37,24 @@ public class QuickSort {
             }
             a[last]=a[fist]; //赋值
         }
-        a[fist]=val; //将9放到最终位置
-        return fist; //返回9所在位置的下标
+        a[fist]=val; //将val放到最终位置
+        return fist; //返回val所在位置的下标
     }
 
-
-    void inputarr2() throws IOException {
-        int j;
-        for (j = 0; j < size; j++) {
-            InputStreamReader isr = new InputStreamReader(System.in);
-            BufferedReader br = new BufferedReader(isr);
-            data[j] = Integer.parseInt(br.readLine());
-=======
+    void inputarr2() {
+        int i;
+        try {
+            for (i = 0; i < size; i++) {
+                InputStreamReader isr = new InputStreamReader(System.in);
+                BufferedReader br = new BufferedReader(isr);
+                data[i] = Integer.parseInt(br.readLine());
             }
-            a[fist]=a[last]; //赋值
-            while(fist<last && a[fist]<=val) { //移动下标
-                fist++;
-            }
-            a[last]=a[fist]; //赋值
->>>>>>> fde96a3cf9fcb0feb98b7fe080000234f59ff56d
-        }
-        a[fist]=val; //将9放到最终位置
-        return fist; //返回9所在位置的下标
-    }
-
-
-    void inputarr2() throws IOException {
-        int j;
-        for (j = 0; j < size; j++) {
-            InputStreamReader isr = new InputStreamReader(System.in);
-            BufferedReader br = new BufferedReader(isr);
-            data[j] = Integer.parseInt(br.readLine());
-        }
+        }catch(Exception e){}
     }
 
 
     public static void main(String[] args) throws IOException {
         QuickSort array = new QuickSort();
-
-
 
         System.out.println("length:");
         try{
@@ -86,32 +62,6 @@ public class QuickSort {
             BufferedReader br = new BufferedReader(isr);
             array.size = Integer.parseInt(br.readLine());
         }catch (Exception e) { }
-        System.out.println("array:");
-        array.inputarr2();
-        System.out.println("before sort:");
-        array.showData();
-
-        Quickly(array.data,0,array.size-1);
-
-        System.out.println("after sort:");
-        array.showData();
-    }
-
-
-    public static void main(String[] args) throws IOException {
-        QuickSort array = new QuickSort();
-
-
-
-        System.out.println("length:");
-
-        try{
-            InputStreamReader isr = new InputStreamReader(System.in);
-            BufferedReader br = new BufferedReader(isr);
-            array.size = Integer.parseInt(br.readLine());
-        }catch (Exception e) { }
-
-
         System.out.println("array:");
         array.inputarr2();
         System.out.println("before sort:");
