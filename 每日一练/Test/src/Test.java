@@ -20,7 +20,7 @@ import java.util.Set;
 
 public class Test {
 
-    public void Sum(List<String> list) {
+    /*public void Sum(List<String> list) {
         //hashset去重
         List<String> newList1=new ArrayList<>(new HashSet<>(list));
         Set<String> newSet1=new HashSet<>();
@@ -29,8 +29,6 @@ public class Test {
         newList1.addAll(newSet1);
 
         int num=0;
+    }*/
 
-
-
-    }
 }
