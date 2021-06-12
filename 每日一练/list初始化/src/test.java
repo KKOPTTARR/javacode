@@ -4,6 +4,10 @@ import java.util.List;
 
 public class test {
     public static void main(String[] args) {
+
+
+        //list初始化的方式
+        
         //method one
         List<String> stringList1 = new LinkedList<String>(){
             {
