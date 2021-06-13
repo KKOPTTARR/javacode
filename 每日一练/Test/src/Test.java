@@ -20,12 +20,15 @@ import java.util.Set;
 
 public class Test {
     public static void main(String[] args) {
+
+        List<String> newList3=new ArrayList<>(new HashSet<>(list));
         System.out.println("11" + "11"  );
     }
     
 
     public void Sum(List<String> list) {
-        //hashset去重
+
+        //利用hashset去重
         List<String> newList1=new ArrayList<>(new HashSet<>(list));
         Set<String> newSet1=new HashSet<>();
         List <String> newList2=new ArrayList();
@@ -33,6 +36,8 @@ public class Test {
         newList1.addAll(newSet1);
 
         int num=0;
+        int a=0;
+
     }
 
 }
