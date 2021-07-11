@@ -26,8 +26,6 @@
 
  */
 
-
-
 class Solution {
     public int brokenCalc(int X, int Y) {
         if (Y <= X) return X - Y;
@@ -48,5 +46,5 @@ class Solution {
         }
         return cnt1 + cnt2;
     }
-    
+
 }
