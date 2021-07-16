@@ -10,6 +10,7 @@ class Solution {
                 if(i==j) {
                     res+=mat[i][j];
                 }
+                //
             }
         }
         for(int i=mat.length-1;i>=0;i--) {
