@@ -3,6 +3,7 @@ import java.io.InputStreamReader;
 import java.nio.Buffer;
 
 public class test {
+    
 
     int[] data= new int[1000];
     int size=data.length;
