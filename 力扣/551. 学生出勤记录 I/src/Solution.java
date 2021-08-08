@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+
+
 class Solution {
    public static boolean checkRecord(String s) {
         int countA=0;
